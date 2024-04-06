@@ -35,7 +35,6 @@ for number in contacts_list:
         number[-2] = re.sub(pattern2, r"+7(\2)\3-\4-\5 доб.\7", number[-2])
 
 ''' Третье задание '''
-index = []
 
 for index_one, human in enumerate(contacts_list):
     for index_two, next_human in enumerate(contacts_list):
@@ -51,7 +50,6 @@ for index_one, human in enumerate(contacts_list):
                             if contacts_list[index_two][idx] != '':
                                 contacts_list[index_one][idx] = contacts_list[index_two][idx]
                     del contacts_list[index_two]
-print(index)
 
 with open("phonebook.csv", "w", encoding="utf-8") as f:
     datawriter = csv.writer(f, delimiter=',')
